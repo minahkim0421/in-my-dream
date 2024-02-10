@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,53 +32,68 @@
             border-width: 50px;
             filter: blur(50px);
         }
-
         .you {
             font-size: 1em;
             text-align: center;
         }
         .you::before {
-            content: "Where am I?";
+            content: "Hey! Look at this cool place";
         }
-
         /* breakpoints */
         @media only screen and (min-width: 400px) {
             .room {
                 border-width: 300px;
             }
             .you::before {
-            content: "help me";
-        }
+                content: "HELP";
+            }
         }
         @media only screen and (min-width: 700px) {
             .room {
                 border-width: 200px;
             }
             .you::before {
-            content: "Where am I?";
-        }
-        }
-        @media only screen and (min-width: 800px) {
-            .room {
-                border-width: 150px;
+                content: "Help me";
             }
         }
         @media only screen and (min-width: 900px) {
             .room {
-                border-width: 100px;
+                border-width: 150px;
+            }
+            .you::before {
+                content: "No, it's too fast, wait! Stop!";
             }
         }
-        @media only screen and (min-width: 1200px) {
+        @media only screen and (min-width: 1000px) {
+            .room {
+                border-width: 100px;
+            }
+            .you::before {
+                content: "Wait, I feel like the walls are getting closer";
+            }
+        }
+        @media only screen and (min-width: 1400px) {
             .room {
                 border-width: 50px;
+            }
+            .you::before {
+                content: "This is such a weird place...";
+            }
+        }
+        @media only screen and (min-width: 1600px) {
+            .room {
+                border-width: 30px;
+            }
+            .you::before {
+                content: "Where am I?";
             }
         }
     </style>
 </head>
+
 <body class="room">
     <div class="vignette"></div>
-        <div class="you">
-            
-        </div>
+    <div class="you"></div>
 </body>
+
 </html>

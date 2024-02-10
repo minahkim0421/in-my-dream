@@ -5,48 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            scroll-behavior: smooth;
+        }
         body {
             background-image: url('buildings-background.png');
             background-attachment: scroll;
             background-size: cover;
-            scroll-behavior: smooth;
+            height: 100vh;
+        }
+        a {
+            outline: none;
         }
         .player {
-            background-image: url('superman_byrne_ani04_mini.gif'); 
+            background-image: url('standing-figure.svg'); 
             width: 60px; 
-            height: 80px; 
+            height: 60px; 
             position: absolute;
-            scroll-behavior: smooth;
-            transition: 0.2s;
         }
         .player:hover {
-            transform: scale(120%);
+            animation: 0.5s linear 0s 1 alternate jump;
+            cursor: pointer;
+            background-image: url('running-figure.svg');
         }
-        .player1 {
-            background-image: url('superman_byrne_ani04_mini.gif'); 
-            width: 60px; 
-            height: 80px; 
-            position: absolute;
-            scroll-behavior: smooth;
-            transition: 0.2s;
-        }
-        .player1:hover {
-            transform: rotateY(360deg);
+        @keyframes jump {
+            from {
+                transform: translateY(-30px);
+            }
+            to {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
     <a style="color: white; position: fixed; text-decoration: none;" href='index.html'>
         Click here to go back</a>
-    <a class="player1" style="left: 320px; top: 550px;" href="#pos1"></a>
-    <div class="player" id="pos1" style="left: 4000px; top: 400px;"></div>
-    <a class="player1" style="left: 3000px; top: 500px;" href="#pos2"></a>
-    <div class="player" id="pos2" style="left: 500px; top: 340px;"></div>
-    <a class="player1" style="left: 2500px; top: 710px;" href="#pos3"></a>
-    <div class="player" id="pos3" style="left: 1050px; top: 450px;"></div>
-    <a class="player1" style="left: 1500px; top: 530px;" href="#pos4"></a>
-    <div class="player" id="pos4" style="left: 5500px; top: 500px;"></div>
-    <a class="player1" style="left: 5000px; top: 520px;" href="#pos5"></a>
-    <div class="player" id="pos5" style="left: 2000px; top: 380px;"></div>
+    <a class="player" id="posE" style="left: 320px; bottom: 250px;" href="#pos1"></a>
+    <a class="player" id="pos1" style="left: 4000px; bottom: 300px;" href="#posA"></a>
+    <a class="player" id="posA" style="left: 3100px; bottom: 320px;" href="#pos2"></a>
+    <a class="player" id="pos2" style="left: 500px; bottom: 300px;" href="#posB"></a>
+    <a class="player" id="posB" style="left: 2500px; bottom: 420px;" href="#pos3"></a>
+    <a class="player" id="pos3" style="left: 930px; bottom: 360px;" href="#posC"></a>
+    <a class="player" id="posC" style="left: 6000px; bottom: 410px;" href="#pos4"></a>
+    <a class="player" id="pos4" style="left: 7500px; bottom: 300px;" href="#posD"></a>
+    <a class="player" id="posD" style="left: 5000px; bottom: 360px;" href="#pos5"></a>
+    <a class="player" id="pos5" style="left: 2000px; bottom: 240px;" href="#posE"></a>
 </body>
 </html>
